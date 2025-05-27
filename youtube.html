@@ -21,7 +21,7 @@
 
       <div class="left-section">
         <img src="images/icons/hamburger-menu.svg" class="hamburger-menu">
-        <img src="images/icons/explore.svg" class="youtube-logo">
+        <img src="images/icons/youtube-logo.svg" class="youtube-logo">
       </div>
 
       <div class="middle-section">
@@ -50,7 +50,9 @@
           <div class="notification-count">3</div>
           <div class="tooltip">Notifications</div>
         </div>
-        <img src="images/my-channel.jpeg" class="current-user-profile">
+        <a href="https://www.youtube.com/@SuperSimpleDev" target="_blank">
+          <img src="images/my-channel.jpeg" class="current-user-profile">
+        </a>
       </div>
 
     </div>
@@ -76,44 +78,11 @@
       </div>
     </div>
 
-    <div class="video-grid">
+    <div class="video-grid js-video-grid">
+      <div>
 
-      <div class="video">
-        <div class="video-preview">
-          <a href="https://www.youtube.com/watch?v=n2RNcPRtAiY" target="_blank">
-            <img src="images/thumbnails/thumbnail-1.webp" class="thumbnail">
-          </a>
-          <div class="video-time">14:20</div>
-        </div>
-        <div class="video-info-grid">
-          <div class="channel-profile">
-            <a href="https://www.youtube.com/c/mkbhd" target="_blank"><img src="images/channels/channel-1.jpeg"
-                class="channel-picture">
-            </a>
-            <div class="profile-demo">
-              <div><img src="images/channels/channel-1.jpeg"></div>
-              <div class="info-demo">
-                <div>Marques Brownlee</div>
-                <div><span>15M subscribers</span></div>
-              </div>
-            </div>
-          </div>
-          <div class="video-infos">
-            <a href="https://www.youtube.com/watch?v=n2RNcPRtAiY" target="_blank"
-              style="text-decoration: none; color: black;"">
-              <p class=" video-title">
-              Talking Tech and AI with Google CEO Sundar Pichai!</p>
-            </a>
-            <a href="https://www.youtube.com/c/mkbhd" target="_blank" style="text-decoration: none;
-            color: black;">
-              <p class="video-author">Marques Brownlee</p>
-            </a>
-            <p class="video-stats">3.4M views &#183; 6 months ago</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
+        <script src="youtube.js" type="module">
+        </script>
   </body>
 
 </html>
