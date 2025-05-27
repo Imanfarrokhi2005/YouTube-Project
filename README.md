@@ -1,1 +1,3 @@
-## Supersimple.dev Html/CSS YouTube course project
+# YouTube clone project
+
+## from Supersimple.dev Html/CSS course!
