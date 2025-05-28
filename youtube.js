@@ -2,7 +2,15 @@ import { videos } from "./data/videos.js";
 
 renderPage();
 
-function renderPage() {
+document.querySelector(".js-youtube-logo").addEventListener("click", () => {
+  location.reload();
+});
+
+document.querySelector(".js-home-link").addEventListener("click", () => {
+  location.reload();
+});
+
+export function renderPage() {
   let pageHTHML = "";
 
   videos.forEach((video) => {
