@@ -181,4 +181,42 @@ export const videos = [
       },
     },
   },
+  {
+    profile: {
+      profileLink: "https://www.youtube.com/c/Destinationtips",
+      profileImage: "images/channels/channel-11.jpeg",
+      profileName: "Destination Tips",
+      subscribesNumber: "800K",
+    },
+    video: {
+      videoTitle:
+        "Dubai's Crazy Underwater Train and Other Things #Only in Dubai",
+      videoLink: "https://www.youtube.com/watch?v=0nZuYyXET3s",
+      tumbnailImage: "images/thumbnails/thumbnail-11.webp",
+      videoTime: "4:10",
+      videoStats: {
+        view: "3M",
+        date: "1 year",
+      },
+    },
+  },
+  {
+    profile: {
+      profileLink: "https://www.youtube.com/teded",
+      profileImage: "images/channels/channel-12.jpeg",
+      profileName: "TED-Ed",
+      subscribesNumber: "5M",
+    },
+    video: {
+      videoTitle:
+        "What would happen if you didn’t drink water? - Mia Nacamulli",
+      videoLink: "https://www.youtube.com/watch?v=9iMGFqMmUFs",
+      tumbnailImage: "images/thumbnails/thumbnail-12.webp",
+      videoTime: "4:51",
+      videoStats: {
+        view: "12M",
+        date: "5 years",
+      },
+    },
+  },
 ];
