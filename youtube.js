@@ -2,18 +2,31 @@ import { videos } from "./data/videos.js";
 
 renderPage();
 
-document.querySelector(".js-youtube-logo").addEventListener("click", () => {
-  location.reload();
-});
-
-document.querySelector(".js-home-link").addEventListener("click", () => {
-  location.reload();
-});
-
 export function renderPage() {
   let pageHTHML = "";
+  let searchVideos = [];
 
-  videos.forEach((video) => {
+  const url = new URL(window.location.href);
+  const searchPram = url.searchParams.get("search");
+  if (searchPram) {
+    searchVideos = videos.filter((video) => {
+      const profileName = video.profile.profileName.toLowerCase();
+      const title = video.video.videoTitle.toLowerCase();
+      const nameCheck = profileName.includes(searchPram);
+      const titleCheck = title.includes(searchPram);
+
+      return nameCheck || titleCheck;
+    });
+    if (searchVideos.length === 0) {
+      alert("No videos matched your search!");
+    } else {
+      console.log("load page with filter");
+    }
+  } else {
+    searchVideos = videos;
+  }
+
+  searchVideos.forEach((video) => {
     pageHTHML += `
       <div class="video">
         <div class="video-preview">
@@ -53,4 +66,27 @@ export function renderPage() {
   });
 
   document.querySelector(".js-video-grid").innerHTML = pageHTHML;
+  console.log("load page");
 }
+
+document.querySelector(".js-youtube-logo").addEventListener("click", () => {
+  window.location.href = "youtube.html";
+});
+
+document.querySelector(".js-home-link").addEventListener("click", () => {
+  window.location.href = "youtube.html";
+});
+
+document.querySelector(".js-search-button").addEventListener("click", () => {
+  const searchWord = document.querySelector(".js-search-bar").value;
+  window.location.href = `youtube.html?search=${searchWord}`;
+});
+
+document
+  .querySelector(".js-search-bar")
+  .addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+      const searchWord = document.querySelector(".js-search-bar").value;
+      window.location.href = `youtube.html?search=${searchWord}`;
+    }
+  });
